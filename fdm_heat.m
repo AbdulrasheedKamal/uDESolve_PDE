@@ -1,11 +1,4 @@
 function sol = fdm_heat(pde_info, params)
-% FDM solver for: u_t = c*nabla^2(u) + f
-%
-% sub_scheme:
-%   'explicit'  FTCS,             stable if r = c*dt/dx^2 <= 0.5
-%   'cn'        Crank-Nicolson,   unconditionally stable  [default]
-%   'adi'       Peaceman-Rachford ADI (2D)
-%   'lod'       Locally 1D / Douglas splitting (3D)
 
     addpath(fullfile(fileparts(fileparts(mfilename('fullpath'))), 'core'));
 
@@ -111,7 +104,7 @@ function sol = fdm_heat(pde_info, params)
         sol.info.rx=rx; sol.info.ry=ry;
 
     elseif dim == 3
-        % LOD (Douglas splitting)
+        % LOD 
         x=grid.x; Nx=grid.Nx; dx=grid.dx;
         y=grid.y; Ny=grid.Ny; dy=grid.dy;
         z=grid.z; Nz=grid.Nz; dz=grid.dz;
