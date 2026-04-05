@@ -1,6 +1,4 @@
 function info = pde_parser(pde_type, params)
-% Classifies the PDE and extracts metadata into an info struct.
-% Called after validation — no defensive checks here.
 
     info.type  = lower(pde_type);
     info.dim   = params.dim;
