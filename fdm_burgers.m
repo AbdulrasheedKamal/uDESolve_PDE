@@ -1,7 +1,4 @@
 function sol = fdm_burgers(pde_info, params)
-% FDM solver for: u_t + u*u_x = nu*u_xx  (1D viscous Burgers)
-%
-% sub_scheme: 'upwind' | 'lax' (Lax-Wendroff) [default] | 'fromm'
 
     addpath(fullfile(fileparts(fileparts(mfilename('fullpath'))), 'core'));
 
