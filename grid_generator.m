@@ -1,6 +1,4 @@
 function grid = grid_generator(params)
-% Builds uniform Cartesian grids for 1D/2D/3D problems.
-% Includes boundary nodes. N refers to interior point count.
 
     dim = params.dim;
     N   = params.N;
