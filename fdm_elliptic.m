@@ -1,6 +1,4 @@
 function sol = fdm_elliptic(pde_info, params)
-% FDM direct sparse solver for Laplace (nabla^2 u = 0) and Poisson (nabla^2 u = f).
-% 1D: tridiagonal. 2D: 5-point stencil (Kronecker). 3D: 7-point stencil.
 
     addpath(fullfile(fileparts(fileparts(mfilename('fullpath'))), 'core'));
 
