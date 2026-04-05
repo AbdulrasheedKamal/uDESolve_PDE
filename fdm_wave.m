@@ -1,7 +1,4 @@
 function sol = fdm_wave(pde_info, params)
-% FDM leapfrog solver for: u_tt = c^2 * nabla^2(u)
-% CFL: r = c*dt/dx <= 1 (1D), rx+ry <= 1 (2D), rx+ry+rz <= 1 (3D)
-% ic = u(x,0),  ic2 = du/dt(x,0)
 
     addpath(fullfile(fileparts(fileparts(mfilename('fullpath'))), 'core'));
 
