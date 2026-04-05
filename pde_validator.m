@@ -1,6 +1,5 @@
 function result = pde_validator(pde_type, params)
 % Validates pde_type and params before any solver runs.
-% Returns result.valid, result.error_msg, result.warnings.
 
     VALID_TYPES   = {'heat','wave','laplace','poisson','burgers','fractional'};
     VALID_SCHEMES = {'fdm','fem','spectral','etdrk4','analytical'};
@@ -29,7 +28,7 @@ function result = pde_validator(pde_type, params)
         return
     end
 
-    % 3. scheme
+    %  scheme
     if ~isfield(params, 'scheme')
         result = fail(result, 'params.scheme required (fdm | fem | spectral | etdrk4 | analytical).');
         return
@@ -39,7 +38,7 @@ function result = pde_validator(pde_type, params)
         return
     end
 
-    % 4. domain exists and is numeric
+    % 4. if domain exists and is numeric
     if ~isfield(params, 'domain')
         result = fail(result, 'params.domain required.');
         return
