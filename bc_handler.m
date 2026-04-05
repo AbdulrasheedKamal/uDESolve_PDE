@@ -1,6 +1,4 @@
-function u = bc_handler(u, bc, grid, t)
-% Applies boundary conditions to solution array u.
-% Supports Dirichlet, Neumann (2nd-order ghost point), Robin.
+function u = bc_handler(u, bc, grid, t)   % uses boundary conditions to solution array u; both dirichlet, neuman
 
     if nargin < 4, t = 0; end
 
