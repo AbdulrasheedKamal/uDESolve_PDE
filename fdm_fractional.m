@@ -1,6 +1,6 @@
 function sol = fdm_fractional(pde_info, params)
-% FDM solver for time-fractional PDE: D^alpha u = c*u_xx + f, alpha in (0,1).
-% Ref: Liu, Anh, Turner (2004) ANZIAM J., Ehighie (2024)
+
+% Ref: Ehighie et all (2024), Alzahrahni. E & Khaliq (2019)
 
     addpath(fullfile(fileparts(fileparts(mfilename('fullpath'))), 'core'));
 
