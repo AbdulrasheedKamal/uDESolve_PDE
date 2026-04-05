@@ -1,7 +1,6 @@
 function sol = fdm_fractional(pde_info, params)
 % FDM solver for time-fractional PDE: D^alpha u = c*u_xx + f, alpha in (0,1).
-% Caputo derivative via Grünwald-Letnikov (L1 implicit scheme).
-% Ref: Liu, Anh, Turner (2004) ANZIAM J.
+% Ref: Liu, Anh, Turner (2004) ANZIAM J., Ehighie (2024)
 
     addpath(fullfile(fileparts(fileparts(mfilename('fullpath'))), 'core'));
 
