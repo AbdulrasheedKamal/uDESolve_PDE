@@ -1,19 +1,4 @@
 function sol = pde_solver(pde_type, params)
-% Main dispatcher for uDESolve PDE extension.
-%
-% Usage:
-%   sol = pde_solver('heat', params)
-%
-% PDE types : heat | wave | laplace | poisson | burgers | fractional
-% Schemes   : fdm  | fem  | spectral | etdrk4  | analytical
-%
-% Required params fields:
-%   .scheme, .domain, .dim, .bc  (always)
-%   .N, .T, .dt, .ic             (time-dep problems)
-%   .coeff.c, .coeff.nu, ...     (PDE coefficients)
-%
-% sol fields:
-%   .u, .x [.y .z], .t, .scheme, .pde_type, .info
 
     vcheck = pde_validator(pde_type, params);
     if ~vcheck.valid
